@@ -1,16 +1,22 @@
-from biblioteca import *
+"""
+Módulo principal para la gestión de la biblioteca central.
+Se crean libros, se agregan a la biblioteca y se prueban los préstamos.
+"""
 
-l=liblio("central")
 
-b1=bk("Python","Guido",1)
-b2=bk("Java","Gosling",2)
+from biblioteca import Biblioteca, Book
 
-l.addb(b1)
-l.addb(b2)
+objetoBiblioteca = Biblioteca("central")
 
-l.show()
+book1 = Book("Python","Guido",1)
+book2 = Book("Java","Gosling",2)
 
-print(b1.prest())
-print(b1.prest())
-b1.ret()
-print(b1.prest())
+objetoBiblioteca.addb(book1)
+objetoBiblioteca.addb(book2)
+
+objetoBiblioteca.show()
+
+print(book1.prest())
+print(book1.prest())
+book1.ret()
+print(book1.prest())
