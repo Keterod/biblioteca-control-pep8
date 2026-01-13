@@ -54,8 +54,6 @@ class Book:
     def lend(self):
         """
         Presta el libro si está disponible.
-
-        :return: True si se pudo prestar, False si ya estaba prestado
         """
         if self.exist:
             self.exist = False
